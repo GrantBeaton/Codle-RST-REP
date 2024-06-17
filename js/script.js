@@ -1,7 +1,8 @@
 'use strict';
 const prompt = require('prompt-sync')();
-
-
+var readlineSync = require('readline-sync');
+let ask = prompt("Please select a category: colour, country")
+let answer = ask.toLowerCase()
 let colours = [
     "amber", "ashen", "azure", "beige", "beryl", "black", "blond", "blush", "brown", "coral", "cream", "dusky", "ebony", "eosin", "flame",
 "green", "gules", "hazel", "henna", "hoary", "indol", "ivory", "khaki", "lemon", "liard", "liart", "lilac", "livid", "lovat", "lyart",
