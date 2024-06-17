@@ -65,33 +65,14 @@ body {
     text-align: center;
     padding: 5px;
   }
-
-  button {
-    width: 150px;
-    height: 90px;
-    font-weight: bold;
-    font-size: 25px;
-    font-family: 'Times New Roman', cursive;
-    background-color: white;
-    color: black;
-    border: 4px solid lightblue;
-    padding: 5px 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inside;
-  }
   
-  button:hover, button:active {
-    background-color: black;
-    color: white;
-    border: 4px solid lightblue;
-  }
   li{
     color: blue;
     font-size: 50px;
     font-weight: bold;
     text-shadow: 2px 2px black;
   }
+
   #game-board {
     display: flex;
     align-items: center;
@@ -99,13 +80,14 @@ body {
   }
   
   .letter-box {
+    background-color: white;
     border: 2px solid gray;
     border-radius: 3px;
     margin: 2px;
     font-size: 2.5rem;
     font-weight: 700;
-    height: 3rem;
-    width: 3rem;
+    height: 60px;
+    width: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,24 +115,22 @@ body {
   
   .second-row {
     margin: 0.5rem 0;
-    padding-right: 250px;
-  }
-
-  .first-row {
-    margin: 0.5rem 0;
-    padding-right: 250px;
-  }
-
-  .third-row {
-    margin: 0.5rem 0;
-    padding-right: 250px;
   }
   
   .keyboard-button {
-    font-size: 1rem;
-    font-weight: 700;
     padding: 0.5rem;
     margin: 0 2px;
     cursor: pointer;
     text-transform: uppercase;
+    width: 80px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Times New Roman', cursive;
+    background-color: white;
+    color: black;
+    border: 4px solid lightblue;
+    text-align: center;
+    text-decoration: none;
+    display: inside;
   }
