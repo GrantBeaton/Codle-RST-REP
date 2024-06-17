@@ -16,6 +16,7 @@ let correctguess = words[Math.floor(Math.random() * words.length)]
 console.log(correctguess)
 
 let board = document.getElementById("game-board");
+document.getElementById("start");
 
 function makeBoard() {
 
