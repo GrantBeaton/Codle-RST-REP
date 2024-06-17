@@ -145,6 +145,17 @@ body {
   
   .second-row {
     margin: 0.5rem 0;
+    padding-right: 250px;
+  }
+
+  .first-row {
+    margin: 0.5rem 0;
+    padding-right: 250px;
+  }
+
+  .third-row {
+    margin: 0.5rem 0;
+    padding-right: 250px;
   }
   
   .keyboard-button {
