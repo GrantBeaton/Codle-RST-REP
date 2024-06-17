@@ -20,7 +20,7 @@ let amimals = [
 “panda”, “puppy”, “rhino”, “sheep”, “skunk”, “sloth”, “tiger”, “whale”, “zebra”
 ]
 
-let amimals = [
+let food = [
     “Fries”, “Prune”, “Apple”, “Froyo”, “Punch”, “Fruit”, “Bacon”, “Grape”, “Quail”, “Bagel”, “Gravy”, “Ramen”, “Basil”, “Guava”, “Salad”, “Beans”, 
 “Honey”, “Salsa”, “Icing”, “Squid”, “Berry”, “Jelly”, “Steak”, “Jerky”, “Bread”, “Juice”, “Sugar”, “Broth”, “Kebab”, “Sushi”, “Candy”, “Kefir”, “Syrup”, 
 “Taffy”, “Lemon”, “Toast”, “Chili”, “Chips”, “Mango”, “Melon”, “Trout”, “Mochi”, “Cocoa”, “Nacho”, “Cream”, “Olive”, “Vodka”, “Crepe”, “Onion”, “Wafer”, 
