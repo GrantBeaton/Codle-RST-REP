@@ -9,6 +9,10 @@ let colours = [
 "sandy", "sepia", "smoky", "snowy","sooty", "steel", "straw", "taupe", "tawny", "topaz", "unmber", "virid","wheat","white"
 ]
 
+let countries = [
+    "aruba", "benin", "chile", "china", "chile", "egypt", "gabon", "ghana", "haiti", "india", "italy", "japan", "kenya", "libya", "macau",
+"malta", "nauru", "nepal", "niger", "palau", "qatar", "samoa", "spain", "sudan", "syria", "tonga", "yemen"
+]
 
 document.getElementById("start_the_game").addEventListener("totalguesses", makeBoard());
 
