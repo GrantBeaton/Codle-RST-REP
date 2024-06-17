@@ -21,10 +21,10 @@ let amimals = [
 ]
 
 let food = [
-    “Fries”, “Prune”, “Apple”, “Froyo”, “Punch”, “Fruit”, “Bacon”, “Grape”, “Quail”, “Bagel”, “Gravy”, “Ramen”, “Basil”, “Guava”, “Salad”, “Beans”, 
-“Honey”, “Salsa”, “Icing”, “Squid”, “Berry”, “Jelly”, “Steak”, “Jerky”, “Bread”, “Juice”, “Sugar”, “Broth”, “Kebab”, “Sushi”, “Candy”, “Kefir”, “Syrup”, 
-“Taffy”, “Lemon”, “Toast”, “Chili”, “Chips”, “Mango”, “Melon”, “Trout”, “Mochi”, “Cocoa”, “Nacho”, “Cream”, “Olive”, “Vodka”, “Crepe”, “Onion”, “Wafer”, 
-“Crisp”, “Oreos”, “Wings”, “Curry”, “Pasta”, “Peach”, “Yeast”, “Pecan”, “Donut”, “Flour”, “Pizza”
+    “fries”, “prune”, “apple”, “froyo”, “punch”, “fruit”, “bacon”, “grape”, “quail”, “bagel”, “gravy”, “ramen”, “basil”, “guava”, “salad”, “beans”, 
+“honey”, “salsa”, “icing”, “squid”, “berry”, “jelly”, “steak”, “jerky”, “bread”, “juice”, “sugar”, “broth”, “kebab”, “sushi”, “candy”, “kefir”, “syrup”, 
+“taffy”, “lemon”, “toast”, “chili”, “chips”, “mango”, “melon”, “trout”, “mochi”, “cocoa”, “nacho”, “cream”, “olive”, “vodka”, “crepe”, “onion”, “wafer”, 
+“crisp”, “oreos”, “wings”, “curry”, “pasta”, “peach”, “yeast”, “pecan”, “donut”, “flour”, “pizza”
 ]
 
 document.getElementById("start_the_game").addEventListener("totalguesses", makeBoard());
