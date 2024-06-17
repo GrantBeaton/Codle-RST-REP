@@ -15,6 +15,18 @@ let countries = [
 "malta", "nauru", "nepal", "niger", "palau", "qatar", "samoa", "spain", "sudan", "syria", "tonga", "yemen"
 ]
 
+let amimals = [
+    “bison”, “camel”, “chimp”, “coati”, “crane”,"dingo”, “fitch”, “hippo”, “horse”, “hyena”, “koala”, “lemur”, “llama”, “moose”, “mouse”, “otter”, 
+“panda”, “puppy”, “rhino”, “sheep”, “skunk”, “sloth”, “tiger”, “whale”, “zebra”
+]
+
+let amimals = [
+    “Fries”, “Prune”, “Apple”, “Froyo”, “Punch”, “Fruit”, “Bacon”, “Grape”, “Quail”, “Bagel”, “Gravy”, “Ramen”, “Basil”, “Guava”, “Salad”, “Beans”, 
+“Honey”, “Salsa”, “Icing”, “Squid”, “Berry”, “Jelly”, “Steak”, “Jerky”, “Bread”, “Juice”, “Sugar”, “Broth”, “Kebab”, “Sushi”, “Candy”, “Kefir”, “Syrup”, 
+“Taffy”, “Lemon”, “Toast”, “Chili”, “Chips”, “Mango”, “Melon”, “Trout”, “Mochi”, “Cocoa”, “Nacho”, “Cream”, “Olive”, “Vodka”, “Crepe”, “Onion”, “Wafer”, 
+“Crisp”, “Oreos”, “Wings”, “Curry”, “Pasta”, “Peach”, “Yeast”, “Pecan”, “Donut”, “Flour”, “Pizza”
+]
+
 document.getElementById("start_the_game").addEventListener("totalguesses", makeBoard());
 
 let totalguesses = 6;
