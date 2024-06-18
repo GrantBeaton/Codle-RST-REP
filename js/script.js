@@ -110,7 +110,7 @@ while (guessesLeft > 0) {
       return;
     }
     let key = target.textContent;
-    if (key === "Del") {
+    if (key == "Del") {
       key = "Backspace";
     }
     shadeKeyBoard(letter, color);
