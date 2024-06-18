@@ -33,6 +33,7 @@ let food = [
 "taffy", "lemon", "toast", "chili", "chips", "mango", "melon", "trout", "mochi", "cocoa", "nacho", "cream", "olive", "vodka", "crepe", "onion", "wafer", 
 "oreos", "wings", "curry", "pasta", "peach", "yeast", "pecan", "donut", "flour", "pizza"
 ]
+//make choice store the correct value depending on the theme
 let choice;
 if (answer == normal){
     choice = normal;
@@ -109,7 +110,7 @@ while (guessesLeft > 0) {
       return;
     }
     let key = target.textContent;
-    if (key === "Del") {
+    if (key == "Del") {
       key = "Backspace";
     }
     shadeKeyBoard(letter, color);
