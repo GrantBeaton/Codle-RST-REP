@@ -1,6 +1,6 @@
 'use strict';
 const prompt = require('prompt-sync')();
-HEAD
+
 let normal = [
     "worst", "youth", "happy", "state", "billy", "alert", "after", "fifth", "chase", "hairy", "share", "still", "lease", "links", "youth",
 "today", "plain", "boost", "lease", "brand", "threw", "apple", "album", "broad", "noise", "breed", "maybe", "boost", "curve", "draft",
@@ -104,7 +104,7 @@ while (guessesLeft > 0) {
     } else {
       insertLetter(pressedkey);
     }
-  });
+  };
     if (!target.classList.contains("keyboard-button")) {
       return;
     }
