@@ -1,6 +1,6 @@
 'use strict';
 const prompt = require('prompt-sync')();
-
+//arrays for different themes, so that it is easier to choose, and remember the word
 let normal = [
     "worst", "youth", "happy", "state", "billy", "alert", "after", "fifth", "chase", "hairy", "share", "still", "lease", "links", "youth",
 "today", "plain", "boost", "lease", "brand", "threw", "apple", "album", "broad", "noise", "breed", "maybe", "boost", "curve", "draft",
