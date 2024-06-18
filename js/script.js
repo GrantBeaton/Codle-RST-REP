@@ -9,7 +9,7 @@ let normal = [
 ]
 var readlineSync = require('readline-sync');
 let ask = prompt("Please select a category: normal, colours, countries, animals, or food")
-let answer = ask.toLowerCase() //ensuring uppercase characters can also be accepted
+let answer = ask.toLowerCase() 
 let colours = [
     "amber", "ashen", "azure", "beige", "beryl", "black", "blond", "blush", "brown", "coral", "cream", "dusky", "ebony", "eosin", "flame",
 "green", "gules", "hazel", "henna", "hoary", "indol", "ivory", "khaki", "lemon", "liard", "liart", "lilac", "livid", "lovat", "lyart",
