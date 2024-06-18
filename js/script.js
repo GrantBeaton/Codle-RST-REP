@@ -120,7 +120,7 @@ function insertLetter(pressedkey) {
     nextletter += 1;
   }
 
-  document.addEventListener("keyup", (e) => {
+  document.addEventListener("keyup", (e)) {
     if (guessesleft == 0) {
       return;
     }
@@ -139,7 +139,7 @@ function insertLetter(pressedkey) {
     } else {
       insertLetter(pressedkey);
     }
-  });
+  };
     if (!target.classList.contains("keyboard-button")) {
       return;
     }
