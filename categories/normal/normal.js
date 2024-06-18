@@ -17,12 +17,12 @@ let nextletter = 0;
 
 function shadeKeyBoard(letter, color) {
     for (let elem of document.getElementsByClassName("keyboard-button")) {
-      if (elem.textContent === letter) {
+      if (elem.textContent == letter) {
         let oldColor = elem.style.backgroundColor;
-        if (oldColor === "green") {
+        if (oldColor == "green") {
           return;
         }
-        if (oldColor === "yellow" && color !== "green") {
+        if (oldColor == "yellow" && color !== "green") {
           return;
         }
         elem.style.backgroundColor = color;
@@ -66,7 +66,7 @@ function shadeKeyBoard(letter, color) {
 }
 
 function insertLetter(pressedkey) {
-    if (nextletter === 5) {
+    if (nextletter == 5) {
       return;
     }
     pressedkey = pressedkey.toLowerCase();
@@ -79,15 +79,15 @@ function insertLetter(pressedkey) {
   }
 
   document.addEventListener("keyup", (e) => {
-    if (guessesleft === 0) {
+    if (guessesleft == 0) {
       return;
     }
     let pressedkey = String(e.key);
-    if (pressedkey === "Backspace" && nextletter !== 0) {
+    if (pressedkey == "Backspace" && nextletter !== 0) {
       deleteLetter();
       return;
     }
-    if (pressedkey === "Enter") {
+    if (pressedkey == "Enter") {
       checkGuess();
       return;
     }
@@ -102,7 +102,7 @@ function insertLetter(pressedkey) {
       return;
     }
     let key = target.textContent;
-    if (key === "Del") {
+    if (key == "Del") {
       key = "Backspace";
     }
     shadeKeyBoard(letter, color);
