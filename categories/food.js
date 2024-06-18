@@ -3,16 +3,16 @@ const prompt = require('prompt-sync')();
 
 var readlineSync = require('readline-sync');
 
-let normal = [
-    "worst", "youth", "happy", "state", "billy", "alert", "after", "fifth", "chase", "hairy", "share", "still", "lease", "links", "youth",
-"today", "plain", "boost", "lease", "brand", "threw", "apple", "album", "broad", "noise", "breed", "maybe", "boost", "curve", "draft",
-"booth", "eager", "brief", "delay", "raise", "stand", "still", "rapid", "these", "close", "aside", "clear", "still", "their", "plane",
-"about", "earth", "bases", "small","booth"
+let food = [
+    "fries", "prune", "apple", "froyo", "punch", "fruit", "bacon", "grape", "quail", "bagel", "gravy", "ramen", "basil", "guava", "salad", "beans", 
+"honey", "salsa", "icing", "squid", "berry", "jelly", "steak", "jerky", "bread", "juice", "sugar", "broth", "kebab", "sushi", "candy", "kefir", "syrup", 
+"taffy", "lemon", "toast", "chili", "chips", "mango", "melon", "trout", "mochi", "cocoa", "nacho", "cream", "olive", "vodka", "crepe", "onion", "wafer", 
+"oreos", "wings", "curry", "pasta", "peach", "yeast", "pecan", "donut", "flour", "pizza"
 ]
 let totalguesses = 6;
 let guessesleft = totalguesses;
 let currentguess ="";
-let correctguess = normal[Math.floor(Math.random() * normal.length)]
+let correctguess = food[Math.floor(Math.random() * food.length)]
 let nextletter = 0;
 
 function shadeKeyBoard(letter, color) {
@@ -42,7 +42,7 @@ function shadeKeyBoard(letter, color) {
     if (guessString.length != 5) {
       return;
     }
-    if (!normal.includes(guessString)) {
+    if (!food.includes(guessString)) {
       return;
     }
     let letterColor = ["gray", "gray", "gray", "gray", "gray"];

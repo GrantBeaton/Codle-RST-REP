@@ -3,16 +3,14 @@ const prompt = require('prompt-sync')();
 
 var readlineSync = require('readline-sync');
 
-let normal = [
-    "worst", "youth", "happy", "state", "billy", "alert", "after", "fifth", "chase", "hairy", "share", "still", "lease", "links", "youth",
-"today", "plain", "boost", "lease", "brand", "threw", "apple", "album", "broad", "noise", "breed", "maybe", "boost", "curve", "draft",
-"booth", "eager", "brief", "delay", "raise", "stand", "still", "rapid", "these", "close", "aside", "clear", "still", "their", "plane",
-"about", "earth", "bases", "small","booth"
+let animals = [
+    "bison", "camel", "chimp", "coati", "crane", "dingo", "fitch", "hippo", "horse", "hyena", "koala", "lemur", "llama", "moose", "mouse", "otter", 
+"panda", "puppy", "rhino", "sheep", "skunk", "sloth", "tiger", "whale", "zebra"
 ]
 let totalguesses = 6;
 let guessesleft = totalguesses;
 let currentguess ="";
-let correctguess = normal[Math.floor(Math.random() * normal.length)]
+let correctguess = animals[Math.floor(Math.random() * animals.length)]
 let nextletter = 0;
 
 function shadeKeyBoard(letter, color) {
@@ -42,7 +40,7 @@ function shadeKeyBoard(letter, color) {
     if (guessString.length != 5) {
       return;
     }
-    if (!normal.includes(guessString)) {
+    if (!animals.includes(guessString)) {
       return;
     }
     let letterColor = ["gray", "gray", "gray", "gray", "gray"];

@@ -35,8 +35,26 @@ color: #ffffff;
 
     </div>
     <div id="game-board">
+
+        <div class="dropdown">
+            <button class="dropbtn">Categories</button>
+            <div class="dropdown-content">
+              <a href="categories/animals.js">Animals</a>
+              <a href="categories/colours.js">Colours</a>
+              <a href="categories/countries.js">Countries</a>
+              <a href="categories/food.js">Food</a>
+              <a href="categories/normal.js">Normal</a>
+            </div>
+          </div>
+
       <div class="letter-row">
-        <div class="letter-box"> </div>
+        <div type = "button" onclick = "firstwordletter()" class="letter-box"> </div>
+        <script>
+            function firstwordletter(){
+    document.getElementById('letter-box').innerHTML = document.getElementById('letter-box').value;
+    
+}
+        </script>
         <div class="letter-box"> </div>
         <div class="letter-box"> </div>
         <div class="letter-box"> </div>
@@ -117,7 +135,6 @@ color: #ffffff;
   </div>
 </body>
 </html>
-
 
 
 
