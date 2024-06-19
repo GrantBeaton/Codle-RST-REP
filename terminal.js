@@ -1,3 +1,5 @@
+//Since the js wouldn't work due to the document stuff, this version should be able to work within the vs code terminal
+
 'use strict';
 
 const prompt = require('prompt-sync')();

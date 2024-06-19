@@ -66,7 +66,7 @@ document.addEventListener("keyup", (e) => {//Document does not work, but should 
     }
 })
 }
-if (choice && (guessesRemaining > 0)){//Calls the function if it has a word and if the user has enough guesses
+if (choice && (guessesleft > 0)){//Calls the function if it has a word and if the user has enough guesses
     trackkey();
 }
 
