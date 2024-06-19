@@ -37,15 +37,15 @@ let ask = prompt("Please select a category: normal, colours, countries, animals,
 let answer = ask.toLowerCase();
 let choice;
 
-if (answer === "normal") {
+if (answer == "normal") {
     choice = normal;
-} else if (answer === "colours") {
+} else if (answer == "colours") {
     choice = colours;
-} else if (answer === "countries") {
+} else if (answer == "countries") {
     choice = countries;
-} else if (answer === "animals") {
+} else if (answer == "animals") {
     choice = animals;
-} else if (answer === "food") {
+} else if (answer == "food") {
     choice = food;
 } else {
     console.log("Invalid category.");
@@ -71,7 +71,7 @@ function checkGuess(guess) {
 function provideFeedback(guess, correctGuess) {
     let feedback = "";
     for (let i = 0; i < 5; i++) {
-        if (guess[i] === correctGuess[i]) {
+        if (guess[i] == correctGuess[i]) {
             feedback += "G"; // Green
         } else if (correctGuess.includes(guess[i])) {
             feedback += "Y"; // Yellow
@@ -89,7 +89,7 @@ while (guessesLeft > 0) {
     }
     let feedback = provideFeedback(guess, correctGuess);
     console.log(feedback);
-    if (guess === correctGuess) {
+    if (guess == correctGuess) {
         console.log("Congratulations! You guessed the correct word.");
         break;
     }
@@ -97,6 +97,6 @@ while (guessesLeft > 0) {
     console.log(`You have ${guessesLeft} guesses left.`);
 }
 
-if (guessesLeft === 0) {
+if (guessesLeft == 0) {
     console.log(`Sorry, you've run out of guesses. The correct word was "${correctGuess}".`);
 }
