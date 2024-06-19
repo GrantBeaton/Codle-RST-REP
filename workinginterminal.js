@@ -32,6 +32,11 @@ let food = [
     "taffy", "lemon", "toast", "chili", "chips", "mango", "melon", "trout", "mochi", "cocoa", "nacho", "cream", "olive", "vodka", "crepe", "onion", "wafer",
     "oreos", "wings", "curry", "pasta", "peach", "yeast", "pecan", "donut", "flour", "pizza"
 ];
+//instructions
+console.log("Welcome to Codle!");
+console.log("Instructuions: you can choose from 5 different themes to guess a word that is different and unique! eveery word must have 5 letters!");
+console.log("Once entered a word, if the word is not in a list it will say so, but if it is in the list, Red means wrong letter, Yellow means the letter is included, and green means you got the placement of the letter right!");
+console.log("Good luck have fun!");
 //the prompt that ask the user to select a theme, if user type invalid, the code exit, if not choice will be equal to the theme and use chocie to know which theme is picked
 let ask = prompt("Please select a category: normal, colours, countries, animals, or food: ");
 let answer = ask.toLowerCase();
@@ -51,45 +56,45 @@ if (answer == "normal") {
     console.log("Invalid category.");
     process.exit(1);
 }
-
+//choose random word, have 6 total guesses, gueesLeft will be substracted by 1 
 let totalGuesses = 6;
 let guessesLeft = totalGuesses;
 let correctGuess = choice[Math.floor(Math.random() * choice.length)];
-
+//check if the word is a 5 letter word, if not it will return Guess must be a 5-letter word
 function checkGuess(guess) {
     if (guess.length !== 5) {
         console.log("Guess must be a 5-letter word.");
         return false;
     }
     if (!choice.includes(guess)) {
-        console.log("Word not in the list.");
+        console.log("Word not in the list.");//this check if choice(the theme you chose, in an array) have the word the user input
         return false;
     }
     return true;
 }
 
-function provideFeedback(guess, correctGuess) {
+function CheckFeedback(guess, correctGuess) {
     let feedback = "";
     for (let i = 0; i < 5; i++) {
         if (guess[i] == correctGuess[i]) {
-            feedback += "G"; // Green
+            feedback += "Green "; // Green if letter is at right place 
         } else if (correctGuess.includes(guess[i])) {
-            feedback += "Y"; // Yellow
+            feedback += "Yellow "; // Yellow if letter is included
         } else {
-            feedback += "B"; // Black
+            feedback += "Red "; // Red if letter not included
         }
     }
     return feedback;
 }
 
 while (guessesLeft > 0) {
-    let guess = prompt("Enter your guess: ").toLowerCase();
+    let guess = prompt("Enter your guess: ").toLowerCase();//ask user for their guess
     if (!checkGuess(guess)) {
         continue;
     }
-    let feedback = provideFeedback(guess, correctGuess);
+    let feedback = CheckFeedback(guess, correctGuess);
     console.log(feedback);
-    if (guess == correctGuess) {
+    if (guess == correctGuess) {//if user's input in the guess prompt is equal to the word selected, then it will display: Congratulations! You guessed the correct word.
         console.log("Congratulations! You guessed the correct word.");
         break;
     }
@@ -97,6 +102,6 @@ while (guessesLeft > 0) {
     console.log(`You have ${guessesLeft} guesses left.`);
 }
 
-if (guessesLeft == 0) {
+if (guessesLeft == 0) { //if guesses ran out, then the game is over, it will then display the correct word
     console.log(`Sorry, you've run out of guesses. The correct word was "${correctGuess}".`);
 }
