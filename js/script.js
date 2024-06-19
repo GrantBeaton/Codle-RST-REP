@@ -45,7 +45,7 @@ let word = 0;
 let correctguess = choice[Math.floor(Math.random() * choice.length)]//Picks a random word from the category
 
 function trackkey () {
-document.addEventListener("keyup", (e) => {//Document does not work, but should track the key presssed by the user to take a guess at the word
+document.addEventListener("keyup", trackkey());//Document does not work, but should track the key presssed by the user to take a guess at the word
     if (guessesRemaining == 0) {//If the user has no guesses left, they can't make another
         return;
     }
@@ -58,14 +58,14 @@ document.addEventListener("keyup", (e) => {//Document does not work, but should 
         checkGuess();
         return;
     }
-    let found = key.match(/[a-z]/gi)//Find the value of the key and sets it to found
+    let found = key//Find the value of the key and sets it to found
     if (!found || found.length > 1) {//If it didn't work, and isn't set or is too long, tries again
         return;
     } else {//If found is set, than it calls addletter, adding the next letter.
         addletter(key);
     }
-})
 }
+
 if (choice && (guessesleft > 0)){//Calls the function if it has a word and if the user has enough guesses
     trackkey();
 }
@@ -78,8 +78,6 @@ function addletter (key) {//Adds the letter to the word
     let row = document.getElementsByClassName("letter-row")[6 - guessesleft]//Finds the correct row
     let box = row.children[word]//Finds the correct box
     box.textContent = key//Fills the box with the letter
-    box.classList.add("filled-box")//Adds a box
-    currentguess.push(key)//Pushes it to teh start
     word += 1//Adds to word so that it won't run infinitely
 }
 
@@ -87,8 +85,6 @@ function subletter () {//Subtracts the letter from a word
     let row = document.getElementsByClassName("letter-row")[6 - guessesleft]//Finds the correct row
     let box = row.children[word - 1]//Finds the correct box
     box.textContent = ""//Empties the box
-    box.classList.remove("filled-box")//Gets rid of it
-    currentguess.pop()//Changes the currenet guess
     word -= 1//Doesn't run infintely
 }
 
@@ -105,7 +101,7 @@ function checkGuess(guess) {
     for (let i = 0; i < 5; i++) {
         if (guess[i] == correctguess[i]) {//Checks if the current letter is within the word and is in the right spot
             feedback += "G"; // green
-        } else if (correctGuess.includes(guess[i])) {//Checks if the current letter is within the word, but in the wrong spot
+        } else if (correctguess.includes(guess[i])) {//Checks if the current letter is within the word, but in the wrong spot
             feedback += "Y"; // yellow
         } else {//If the word does not include the letter, it then becomes red
             feedback += "R"; // red
@@ -126,7 +122,7 @@ if (guess){
 userguess();
 }
 function keyboardpress(){//Should track if the user clicked the on-screen keyboard
-    document.getElementById("keyboard-cont").addEventListener("click", (e) => {//Would track the clicked letter if document worked
+    document.getElementById("keyboard-cont").addEventListener("click", keyboardpress());//Would track the clicked letter if document worked
         let clickedkey = e.clickedkey //Makes the value fo clickedkey the one that the user clicked
         if (!clickedkey.classList.contains("keyboard-button")) {//If it can't find a keyboard button, returns
             return;
@@ -135,9 +131,8 @@ function keyboardpress(){//Should track if the user clicked the on-screen keyboa
         if (key === "Del") {//If the user pressed del, it calls subletter
             subletter();
         } 
-        document.dispatchEvent(new KeyboardEvent("keyup", {'key': key}))//Should work with document, stops the code and waits for next clicked key
-    })
-}
+        document.dispatchEvent(KeyboardEvent("keyup", key))//Should work with document, stops the code and waits for next clicked key
+    }
 if (document.getElementById("keyboard-cont")){//If it can find the right key
     keyboardpress();//Runs keyboardpress
 }
