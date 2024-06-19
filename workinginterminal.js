@@ -34,8 +34,8 @@ let food = [
 ];
 //instructions
 console.log("Welcome to Codle!");
-console.log("Instructuions: you can choose from 5 different themes to guess a word that is different and unique! eveery word must have 5 letters!");
-console.log("Once entered a word, if the word is not in a list it will say so, but if it is in the list, Red means wrong letter, Yellow means the letter is included, and green means you got the placement of the letter right!");
+console.log("Instructions: you can choose from 5 different themes to guess a word that is different and unique! Every word must have 5 letters!");
+console.log("Once you've entered a word, if the word is not in the list it will say so, but if it is in the list: \nRed means wrong letter \nYellow means the letter is included \nGreen means you got the placement of the letter right!");
 console.log("Good luck have fun!");
 //the prompt that ask the user to select a theme, if user type invalid, the code exit, if not choice will be equal to the theme and use chocie to know which theme is picked
 let ask = prompt("Please select a category: normal, colours, countries, animals, or food: ");
@@ -105,3 +105,4 @@ while (guessesLeft > 0) {
 if (guessesLeft == 0) { //if guesses ran out, then the game is over, it will then display the correct word
     console.log(`Sorry, you've run out of guesses. The correct word was "${correctGuess}".`);
 }
+
