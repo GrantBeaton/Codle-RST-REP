@@ -40,7 +40,7 @@ let choice = prompt("Please select a category: normal, colours, countries, anima
 //Sets some variables that are saved
 let totalguesses = 6;
 let guessesleft = totalguesses;
-let currentguess ="";
+let guess ="";
 let word = 0;
 let correctguess = choice[Math.floor(Math.random() * choice.length)]//Picks a random word from the category
 
