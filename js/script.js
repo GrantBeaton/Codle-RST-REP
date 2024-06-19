@@ -96,7 +96,7 @@ function checkGuess(guess) {
     if (!choice.includes(correctguess)) {// If the choice is the right guess, returns
       return;
     }
-    let feedback = ["gray", "gray", "gray", "gray", "gray"];
+    let feedback = ["B", "B", "B", "B", "B"];
   
     for (let i = 0; i < 5; i++) {
         if (guess[i] == correctguess[i]) {//Checks if the current letter is within the word and is in the right spot
