@@ -1,7 +1,7 @@
 'use strict';
 
 const prompt = require('prompt-sync')();
-//
+//arrays for different themes, so they cna be easily picked out and stored into the right answer.
 let normal = [
     "worst", "youth", "happy", "state", "billy", "alert", "after", "fifth", "chase", "hairy", "share", "still", "lease", "links", "youth",
     "today", "plain", "boost", "lease", "brand", "threw", "apple", "album", "broad", "noise", "breed", "maybe", "boost", "curve", "draft",
@@ -32,7 +32,7 @@ let food = [
     "taffy", "lemon", "toast", "chili", "chips", "mango", "melon", "trout", "mochi", "cocoa", "nacho", "cream", "olive", "vodka", "crepe", "onion", "wafer",
     "oreos", "wings", "curry", "pasta", "peach", "yeast", "pecan", "donut", "flour", "pizza"
 ];
-
+//the prompt that ask the user to select a theme, if user type invalid, the code exit, if not choice will be equal to the theme and use chocie to know which theme is picked
 let ask = prompt("Please select a category: normal, colours, countries, animals, or food: ");
 let answer = ask.toLowerCase();
 let choice;
