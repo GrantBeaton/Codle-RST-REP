@@ -2,7 +2,7 @@
 
 
 'use strict';
-const prompt = require('prompt-sync')();
+const prompt = require('prompt-sync')();//This also doesn't work
 //arrays for different themes, so that it is easier to choose, and remember the word, these are moved to their own files
 let normal = [
     "worst", "youth", "happy", "state", "billy", "alert", "after", "fifth", "chase", "hairy", "share", "still", "lease", "links", "youth",
