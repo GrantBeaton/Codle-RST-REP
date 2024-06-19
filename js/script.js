@@ -45,7 +45,7 @@ let word = 0;
 let correctguess = choice[Math.floor(Math.random() * choice.length)]//Picks a random word from the category
 
 function trackkey () {
-document.addEventListener("keyup", trackkey());//Document does not work, but should track the key presssed by the user to take a guess at the word
+document.addEventListener("keyup", e);//Document does not work, but should track the key presssed by the user to take a guess at the word
     if (guessesRemaining == 0) {//If the user has no guesses left, they can't make another
         return;
     }
@@ -122,7 +122,7 @@ if (guess){
 userguess();
 }
 function keyboardpress(){//Should track if the user clicked the on-screen keyboard
-    document.getElementById("keyboard-cont").addEventListener("click", keyboardpress());//Would track the clicked letter if document worked
+    document.getElementById("keyboard-cont").addEventListener("click", e);//Would track the clicked letter if document worked
         let clickedkey = e.clickedkey //Makes the value fo clickedkey the one that the user clicked
         if (!clickedkey.classList.contains("keyboard-button")) {//If it can't find a keyboard button, returns
             return;
